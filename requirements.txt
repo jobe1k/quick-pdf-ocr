@@ -1,0 +1,3 @@
+pip install pdf2image==1.17.0
+pip install pytesseract==0.3.10
+pip install PyMuPDF
