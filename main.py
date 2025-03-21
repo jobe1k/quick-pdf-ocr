@@ -1,30 +1,10 @@
-# Databricks notebook source
-# MAGIC %md #### Install dependencies
+ # Import necessary modules
+from utils.ocr_funcs import *
+from pathlib import Path 
+import time
 
-# COMMAND ----------
-
-# MAGIC %pip install pdf2image==1.17.0 pytesseract==0.3.10 PyMuPDF==1.25.3 -q
-# MAGIC dbutils.library.restartPython()
-
-# COMMAND ----------
-
-# MAGIC %sh  
-# MAGIC sudo apt update > /dev/null 2>&1  
-# MAGIC sudo apt install -y poppler-utils > /dev/null 2>&1  
-
-# COMMAND ----------
-
-# MAGIC %md ##### Import modules and custom packages and run ocr
-
-# COMMAND ----------
-
- if __name__ == '__main__':
-     
-    # Import necessary modules
-    from utils.ocr_funcs import *
-    from pathlib import Path 
-    import time
-    import gc
+ if __name__ == '__main__':    
+   
   
     # Create an instance of the PDFOCRProcessor  
     ocr_processor = PDFOCRProcessor(language="eng")  # Set OCR language to English  
@@ -51,10 +31,3 @@
     # Elapsed time  
     elapsed_time = end_time - start_time  
     print(f"{'-'*100}\nTime taken: {elapsed_time:.2f} seconds")  
-
-    # Delete reference and force garbage collection
-    del pdf_bytes
-    gc.collect()
-
-# COMMAND ----------
-
