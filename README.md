@@ -1,4 +1,3 @@
-```readme.md
 # PDFOCRProcessor
 
 `PDFOCRProcessor` is a Python class designed to process PDF files and extract text using **OCR (Optical Character Recognition)**. It is particularly useful for working with scanned or image-based PDFs where text extraction requires OCR.
