@@ -14,8 +14,6 @@
 - **Text Cleaning**: Cleans extracted text by removing unnecessary spaces and line breaks.
 - **Structured Output**: Wraps text in `<page_xx>` tags for easy parsing.
 
----
-
 ## Installation
 
 ### 1. Install Python Libraries
@@ -48,8 +46,6 @@ brew install poppler tesseract
 
 Download and install [Poppler](https://github.com/oschwartz10611/poppler-windows/releases).
 Download and install [Tesseract OCR](https://github.com/UB-Mannheim/tesseract/wiki).
-
----
 
 ## Usage
 
@@ -87,8 +83,6 @@ for page_text in text:
     print(page_text)
 ```
 
----
-
 ## Example Output
 
 For a 2-page scanned PDF, the output might look like this:
@@ -101,5 +95,4 @@ This is the text extracted from page 1.
 <page_2>
 This is the text extracted from page 2.
 </page_2>
-```
 ```
