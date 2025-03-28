@@ -18,7 +18,7 @@ import time
     start_time = time.time()
 
     # Process the PDF using the class  
-    texts, page_count = ocr_processor.pdf_to_text(pdf_bytes, max_pages=None)  
+    text = ocr_processor.pdf_to_text(pdf_bytes, max_pages=None)  
 
     # End the timer 
     end_time = time.time()  
